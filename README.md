@@ -1,6 +1,7 @@
 # Patients and Research Style Guide
 
 Includes styles for:
+
 1. Colors
 2. Typography
 3. Forms
