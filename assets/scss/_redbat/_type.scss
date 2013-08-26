@@ -1,0 +1,153 @@
+/*
+
+TYPE
+-------------------------------------------
+Table of Contents
+
+	- Base Type
+
+	- Fonts
+
+	- Headings
+
+	- Text
+
+	- Inline Type
+
+	- Blockquote
+
+	- hr
+
+	- Links
+
+------------------------------------------- */
+
+
+/*
+
+BASE TYPE
+------------------------------------------- */
+
+body {
+	font-size: 110%;
+	line-height: 140%;
+	color: $bodyColor;
+	@extend %serif;
+}
+
+// TYPE SIZE VARIABLES
+
+$text-size-xs: .8em;
+$text-size-s: .9em;
+$text-size-m: 1em;
+$text-size-l: 1.5em;
+$text-size-xl: 2em;
+
+%heading-size-s { font-size: .95em;}
+%heading-size-m { font-size: 1.25em;}
+%heading-size-l { font-size: 1.5em;}
+%heading-size-xl { font-size: 2em;}
+
+
+/*
+
+FONTS
+------------------------------------------- */
+
+%sans {
+	font-family: "proxima-nova",sans-serif; ;
+}
+
+%serif {
+	font-family: "ff-tisa-web-pro",serif;
+}
+
+
+/*
+
+HEADINGS
+------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+	color: $headingColor;
+	@extend %sans;
+	font-weight: bold;
+}
+
+h1 {
+	@extend %heading-size-xl;
+	line-height: 130%;
+}
+
+/*
+
+TEXT
+------------------------------------------- */
+
+
+/*
+
+INLINE TYPE
+------------------------------------------- */
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+code {
+	background: $borderColor;
+	padding: 3px;
+	font-family: monospace;
+}
+
+/*
+
+BLOCKQUOTE
+------------------------------------------- */
+
+
+/*
+
+HR
+------------------------------------------- */
+
+hr {
+	// border: solid $borderColor;
+	border-width: 5px 0 0;
+	clear: both;
+	// margin: $spacing-m auto;
+	height: 0;
+	width: auto;
+	max-width: 350px;
+	display: block;
+	padding: 0;
+}
+
+
+/*
+
+LINKS
+------------------------------------------- */
+a {
+	color: $linkColor;
+	@include transition(.2s ease-in-out);
+	&:hover {
+		color: darken($linkColor, 10%);
+	}
+}
+
+/*
+
+ICON FONT
+------------------------------------------- */
+
+[data-icon]:before {
+  content: attr(data-icon);
+  // @include iconfont;
+  speak: none;
+  vertical-align: top;
+}

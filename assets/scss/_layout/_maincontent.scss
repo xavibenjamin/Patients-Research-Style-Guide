@@ -1,0 +1,59 @@
+.main-content {
+  margin: 50px 0 50px 270px;
+  width: 800px;
+  @extend %clearfix;
+}
+
+
+.page-description {
+  border-bottom: 5px solid $borderColor;
+  padding: 0 0 $spacing-xs;
+  margin: 0 0 $spacing-l;
+  .subtitle {
+    color: $lightColor;
+  }
+}
+
+/* Section Specific Styles ------ */
+
+.entry {
+  border-bottom: 1px solid $borderColor;
+  padding: 0 0 $spacing-s;
+  margin: 0 0 $spacing-s;
+  @extend %clearfix;
+}
+
+.section-title {
+  color: lighten($darkColor, 30%);
+  display: block;
+  float: left;
+  margin-left: -160px;
+  text-align: right;
+  @extend %heading-size-m;
+}
+
+/* Color Section Specific Styles ------ */
+
+.color {
+  margin-right: 20px;
+  float: left;
+  @extend %clearfix;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.color-swatch {
+  width: 40px;
+  height: 40px;
+  background: #ccc;
+  margin: 0 auto $spacing-xxs;
+}
+
+.color__darkColor {background: $darkColor;}
+.color__lightColor {background: $lightColor;}
+.color__headingColor {background: $headingColor;}
+.color__bodyColor {background: $bodyColor;}
+.color__linkColor {background: $linkColor;}
+.color__borderColor {background: $borderColor;}
+.color__alertColor {background: $alertColor;}
