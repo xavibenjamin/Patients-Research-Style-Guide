@@ -39,11 +39,11 @@ body {
 
 $text-size-xs: .8em;
 $text-size-s: .9em;
-$text-size-m: 1em;
+$text-size-m: 1.1em;
 $text-size-l: 1.5em;
 $text-size-xl: 2em;
 
-%heading-size-s { font-size: .95em;}
+%heading-size-s { font-size: .9em;}
 %heading-size-m { font-size: 1.25em;}
 %heading-size-l { font-size: 1.5em;}
 %heading-size-xl { font-size: 2em;}
@@ -77,13 +77,38 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	@extend %heading-size-xl;
 	line-height: 130%;
+	margin: 0 0 $spacing-xxs;
+}
+
+h2 {
+	@extend %heading-size-l;
+	margin: 0 0 5px;
+}
+
+h3 {
+	@extend %heading-size-m;
+	margin: $spacing-m 0 5px;
+}
+
+h4 {
+	@extend %heading-size-s;
+	color: lighten($darkColor, 25%);
+	margin: $spacing-l 0 5px;
+	text-transform: uppercase;
 }
 
 /*
 
 TEXT
 ------------------------------------------- */
-
+p {
+	font-size: $text-size-m;
+	line-height: 160%;
+	margin: 0 0 $spacing-xs;
+	&:last-child {
+		margin: 0;
+	}
+}
 
 /*
 

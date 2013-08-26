@@ -11,12 +11,13 @@
   margin: 0 0 $spacing-l;
   .subtitle {
     color: $lightColor;
+    font-size: 1.1em;
   }
 }
 
 /* Section Specific Styles ------ */
 
-.entry {
+.module {
   border-bottom: 1px solid $borderColor;
   padding: 0 0 $spacing-s;
   margin: 0 0 $spacing-s;
@@ -25,10 +26,11 @@
 
 .section-title {
   color: lighten($darkColor, 30%);
-  display: block;
   float: left;
-  margin-left: -160px;
+  margin-left: -240px;
   text-align: right;
+  width: 160px;
+  @extend %clearfix;
   @extend %heading-size-m;
 }
 
@@ -40,6 +42,13 @@
   @extend %clearfix;
   &:last-child {
     margin: 0;
+  }
+  h3 {
+    font-size: 1em;
+    margin: 0;
+  }
+  p {
+    font-size: 1em;
   }
 }
 
@@ -57,3 +66,19 @@
 .color__linkColor {background: $linkColor;}
 .color__borderColor {background: $borderColor;}
 .color__alertColor {background: $alertColor;}
+
+
+/* Typography Section Specific Styles ------ */
+
+.entry {
+  margin: $spacing-m 0 0;
+  width: 620px;
+}
+
+p.pubdate {
+  color: $lightColor;
+  font-size: $text-size-xs;
+  font-weight: bold;
+  margin: 0 0 $spacing-xs;
+  @extend %sans;
+}
