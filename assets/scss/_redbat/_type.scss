@@ -170,9 +170,20 @@ a {
 ICON FONT
 ------------------------------------------- */
 
+@include embed-font("Icomoon", "../fonts/icon-font/icomoon");
+%iconfont {
+	font-family: "Icomoon";
+	font-weight: normal;
+}
+
+.icon-font-sample {
+	color: $headingColor;
+	@extend %iconfont;
+}
+
 [data-icon]:before {
   content: attr(data-icon);
-  // @include iconfont;
+  @extend %iconfont;
   speak: none;
   vertical-align: top;
 }

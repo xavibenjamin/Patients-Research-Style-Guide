@@ -1,0 +1,24 @@
+/*
+
+TABLES
+------------------------------------------- */
+
+table {
+  color: $lightColor;
+  @extend %sans;
+  tr {
+    border-bottom: 1px solid $borderColor;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  td {
+    border-right: 1px solid $borderColor;
+    font-size: 1.3em;
+    padding: 15px;
+    text-align: center;
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
