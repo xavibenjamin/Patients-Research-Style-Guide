@@ -1,6 +1,23 @@
 /*
 
 IMAGES
--------------------------------------------
+------------------------------------------- */
 
-*/
+figure {
+  background: lighten($lightColor, 27%);
+  border-radius: 0 0 3px 3px;
+  margin: 0 0 $spacing-s;
+  padding: $spacing-xxs;
+  figcaption {
+    padding: 5px 10px;
+    @extend %sans;
+    p {
+      font-size: .85em;
+    }
+  }
+  img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+  }
+}

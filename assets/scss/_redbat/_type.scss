@@ -110,6 +110,26 @@ p {
 	}
 }
 
+ol {
+	margin: 0 0 $spacing-xs $spacing-l;
+	list-style-type: decimal;
+	li {
+		font-size: $text-size-m;
+		line-height: 160%;
+		margin: 0 0 $spacing-xxs;
+	}
+}
+
+ul {
+	margin: 0 0 $spacing-xs $spacing-l;
+	list-style-type: disc;
+	li {
+		font-size: $text-size-m;
+		line-height: 160%;
+		margin: 0 0 $spacing-xxs;
+	}
+}
+
 /*
 
 INLINE TYPE
@@ -133,6 +153,21 @@ code {
 
 BLOCKQUOTE
 ------------------------------------------- */
+
+blockquote {
+	border-left: 3px solid $darkColor;
+	padding-left: 15px;
+	p {
+		color: lighten($bodyColor, 15%);
+	}
+	small {
+		color: lighten($bodyColor, 30%);
+		font-size: .85em;
+		&:before{
+			content: "—";
+		}
+	}
+}
 
 
 /*
